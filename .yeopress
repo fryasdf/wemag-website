@@ -1,0 +1,21 @@
+{
+	"wpVer": "4.4.2",
+	"url": "http://wemag.local",
+	"tablePrefix": "wemag_",
+	"dbHost": "localhost",
+	"dbName": "db614909868",
+	"dbUser": "dbo614909868",
+	"dbPass": "someStupidPassword",
+	"git": false,
+	"customDirs": false,
+	"installTheme": true,
+	"themeDir": "yeopress",
+	"themeType": "git",
+	"themeTaskRunner": "grunt",
+	"themeUser": "wesleytodd",
+	"themeRepo": "YeoPress",
+	"themeBranch": "template",
+	"wpDir": ".",
+	"contentDir": "wp-content",
+	"saltKeys": "define('AUTH_KEY',         '}&6Eh72;jtmFyb>yUx)oe*07nAHkk=0N^95cBxcS61+oE{H&ICj% Yn%Jm/X(HJw');\ndefine('SECURE_AUTH_KEY',  'EP59wUTl,aJ]#G9qicd=SN!7L(@+iW0hLl9$N4J2;g,g:fOp+v&+]+lFUrbH[`6?');\ndefine('LOGGED_IN_KEY',    '0/F l+6Y|@i}%e d4lrVB&KVHpGgc1$_NuKO)CY}BLHVuym<-~V26*]HV*kn;Xuo');\ndefine('NONCE_KEY',        'vC~**RIK$q;x#H}8[Gw5@y-S*KUe2~~?H5ex)V:r/|GC-r`UOl,6[Ls3!``+gl3`');\ndefine('AUTH_SALT',        'enN=qj}<pHI;DN`o+/s+|Rp_GQvHL7<>Vk26naCSMD@M(ZcjM<^:-Seph7ba20.g');\ndefine('SECURE_AUTH_SALT', '-eRKOHcKQfY=:,~!p:{zU^g<8J5{xDvor3b}8b)@qG%Geby4VV0mHd#f[LG_q:4e');\ndefine('LOGGED_IN_SALT',   '6K;00LZW]r$O@p(;R(1ES2m<JP7wAdR_4X-WGX>pJ!j3g)kU-2Up(A$z@H^8[.pa');\ndefine('NONCE_SALT',       'IuZrLGwJ!p%%Isvtc1]rK>9P f4B4OTeq!)oGf~~d(=9+idQ/gE7`R1M .*7r.=j');\n"
+}
