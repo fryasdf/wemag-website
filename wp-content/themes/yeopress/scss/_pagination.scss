@@ -1,0 +1,41 @@
+@import 'variables';
+
+.active-navigation-element {
+  background-color: $mainColor !important;
+  color: white !important;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  li {
+    text-align: center;
+    vertical-align: middle;
+    display: inline;
+    .blind_a {
+      float:left;
+    }
+    a {
+      margin: 0;
+      color: black;
+      float: left;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.active {
+      background-color: $mainColor;
+      color: white;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+
+ul.pagination li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+
+

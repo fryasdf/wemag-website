@@ -1,0 +1,174 @@
+@import 'variables';
+
+$above_nav_margin: 58px;
+// distance from a TOP LEVEL ('bildog', 'Projekte', ...) 
+// entry that has a sublist to the sublist
+// in the navigation bar
+// (i.e. the space below 'bildog' to its first entry 'Ziele')
+$navbar_sublist_padding: 20px;
+
+// thickness of the contour oval around the entries in the 
+// navigation bar
+// i.e. the border in
+// /--------\  <---- thickness
+// | bildog |
+// \--------/
+$radius_thickness: 2px;
+
+$extra_padding_last_button : 200px;
+
+$extra_padding_for_links: 200px;
+
+.active-navigation-element {
+  background-color: $mainColor !important;
+  color: white !important;
+}
+
+#page-header {
+
+  ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    //cursor: pointer;
+
+    .lt-ie9 & {
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#298cba', endColorstr='#1d6385',GradientType=0 ); /* IE6-8 */
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+  }
+  .nav ul li {
+    padding: $size_base/2 0.3em;
+  }
+}
+
+div.nav {
+
+  & > ul {
+
+    & > li {
+      @media only screen and (min-width: 780px) {
+        margin-top: $above_nav_margin;
+      }
+    }
+
+    & > li {
+      margin-bottom: 30px;
+
+      &.page_item {
+
+        // extra height last button (for nice look)?
+        // i.e. something like
+        //
+        //                      |             |
+        //                      |             |
+        //                      |             |
+        // /----------\         |             |
+        // | button 1 |   ...   | last button |
+        // \----------/         \-------------/
+        //&:last-child a {
+        //  @media only screen and (min-width: 780px) {
+        //    padding-top: $extra_padding_last_button;
+        //  }
+        //}
+
+        & > a {
+          border: $radius_thickness solid $mainColor;
+          border-radius: 20px;
+          padding: 5px 20px 5px 20px;
+          color: $mainColor;
+          margin-top: -$extra_padding_last_button;
+          margin-right: 5px;
+          //display:inline-block;
+          &:focus, &:hover,  {
+            @extend .active-navigation-element;
+          }
+            text-align: center;
+        }
+      }
+
+      &:hover {
+        &.page_item_has_children {
+          & > a {
+            // if one hovers over an entry in the TOP LEVEL in 
+            // the navigation bar AND this entry has subentries then
+            // ...
+            // make round edges at the top and normal edges at the bottom
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-right-radius:0px;
+            border-bottom-left-radius:0px;
+            // and give a little extra padding at the bottom
+            padding-bottom: $navbar_sublist_padding;
+            padding-top: 5px;
+            padding-right: 20px;
+            padding-left: 20px;
+
+            background-color: $mainColor;
+            color: white;
+          }
+        }
+      }
+
+      &.current_page_item > a {
+        @extend .active-navigation-element;
+        // CAREFUL: this also prevents mouseover events!!
+        // we cannot do it like this!
+        //pointer-events: none;
+        cursor: default;
+      }
+
+      &.page_item_has_children {
+
+        & > ul.children {
+          background-color: $mainColor;
+          display: none;
+          z-index: 99999;
+        }
+
+        &:hover > ul.children, &.open > ul.children {
+          margin-top: 15px;
+          display: block;
+          position: absolute;
+
+          li {
+            overflow:hidden;
+            border: $radius_thickness solid $mainColor;
+
+            &:hover {
+              background-color: white;
+              border: $radius_thickness solid $mainColor;
+
+              a {
+                color: $mainColor;
+              }
+            }
+
+            a {
+              padding-left: 5px + $extra_padding_for_links;
+              padding-right: 5px + $extra_padding_for_links ;
+              padding-top: $extra_padding_for_links; 
+              padding-bottom: $extra_padding_for_links; 
+
+              margin-left: -$extra_padding_for_links;
+              margin-top: -$extra_padding_for_links;
+              margin-bottom: -$extra_padding_for_links;
+              margin-right: -$extra_padding_for_links;
+
+              border: 0;
+              color: white;
+              display:inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

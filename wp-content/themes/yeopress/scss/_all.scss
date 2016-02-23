@@ -1,0 +1,42 @@
+
+
+strong {
+  color: $mainColor;
+}
+
+.container {
+  padding: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+
+  // only show boxes and shadow if there is a head pic
+  @media only screen and (min-width: 550px) {
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    1px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         1px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  }
+    
+}
+
+.main-column {
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media only screen and (min-width: 640px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+}
+
+@media only screen and (min-width: 940px) {
+  .container {
+    width: 940px;
+  }
+}
+
+
+.icon-fb {
+  margin-bottom: 5px;
+}
